@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+spring-helloworld/logs
+spring-helloworld/target
+
+IoC-xml/logs
+IoC-xml/target

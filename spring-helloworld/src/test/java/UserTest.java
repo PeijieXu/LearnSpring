@@ -1,9 +1,8 @@
-package xpj.learn;
 
-import org.apache.logging.log4j.core.config.builder.api.LoggerComponentBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import xpj.learn.User;
 
 //import org.slf4j.LoggerFactory;
 //import org.apache.logging.log4j.Logger;
