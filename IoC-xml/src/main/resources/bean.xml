@@ -5,6 +5,10 @@
 
     <bean id="iocxml-user-classid" class="xpj.learn.iocxml.User"></bean>
 
+    <bean id="iocxml-userDaoImpl-classid" class="xpj.learn.iocxml.bean.UserDaoImpl"></bean>
+
+<!--    cannot add the following line or it will throw an exception-->
+<!--    <bean id="iocxml-personDaoImpl-classid" class="xpj.learn.iocxml.bean.PersonDaoImpl"></bean>-->
 
 
 </beans>
