@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    1st method-->
+<!--    <bean id="iocxml-clazz" class="xpj.learn.iocxml.clazz.Clazz">-->
+<!--        <property name="number" value="1"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="iocxml-student" class="xpj.learn.iocxml.clazz.Student">-->
+<!--        -->
+<!--&lt;!&ndash;        inject object &ndash;&gt;-->
+<!--        <property name="clazz" ref="iocxml-clazz"/>-->
+<!--        -->
+<!--&lt;!&ndash;        inject normal attribute&ndash;&gt;-->
+<!--        <property name="name" value="Amy"/>-->
+<!--    -->
+<!--    </bean>-->
+
+
+
+<!--    2nd method-->
+    <bean id="iocxml-student" class="xpj.learn.iocxml.clazz.Student">
+        <property name="name" value="Mary"/>
+        <property name="clazz">
+            <bean id="useless-id" class="xpj.learn.iocxml.clazz.Clazz">
+                <property name="number" value="2"/>
+            </bean>
+        </property>
+
+    </bean>
+
+</beans>
