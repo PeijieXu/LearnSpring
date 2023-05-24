@@ -2,9 +2,8 @@ package xpj.learn.aop.base;
 
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -28,6 +27,31 @@ public class LogAspect {
 
         System.out.println("Logger -> after method (args): " + methodName + " " + args);
     }
+
+    @AfterReturning(value = "execution(public int xpj.learn.aop.base.CalculatorImpl.*(..))", returning = "result")
+    public void afterReturn(JoinPoint joinPoint, Object result) {
+        String methodName = joinPoint.getSignature().getName();
+
+
+        System.out.println("Logger -> after returning (args): " + methodName + " " + result);
+
+    }
+
+//    @AfterThrowing(value, throwing="ex")
+
+
+
+//    @Around()
+//    public void aroundMethod(ProceedingJoinPoint proceedingJoinPoint) {
+//        try {
+//            Object result = proceedingJoinPoint.proceed();
+//        } catch (Throwable e) {
+//            throw new RuntimeException(e);
+//        } finally {
+//            System.out.println("Logger -> after method (args): ");
+//        }
+//
+//    }
 
 
 }
